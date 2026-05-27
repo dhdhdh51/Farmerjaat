@@ -1,0 +1,20 @@
+CREATE DATABASE IF NOT EXISTS krishi_ledger;
+USE krishi_ledger;
+CREATE TABLE IF NOT EXISTS fields (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  area DECIMAL(10,2) NOT NULL,
+  soil_type VARCHAR(120),
+  irrigation_source VARCHAR(120),
+  latitude DOUBLE,
+  longitude DOUBLE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE IF NOT EXISTS expenses (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  category VARCHAR(60) NOT NULL,
+  amount DECIMAL(10,2) NOT NULL,
+  note VARCHAR(255),
+  expense_date DATE NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
