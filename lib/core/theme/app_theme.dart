@@ -6,7 +6,7 @@ class AppTheme {
     colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF1B8D53)),
     useMaterial3: true,
     textTheme: GoogleFonts.notoSansTextTheme(),
-    cardTheme: CardTheme(
+    cardTheme: CardThemeData(
       elevation: 0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
     ),
